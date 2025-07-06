@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/weather', [WeatherController::class, 'index'])->name('weather.index');
+Route::get('/posts/own', function () {
+    return view('posts.own');
+});
+Route::get('/events', [PostController::class, 'events']);

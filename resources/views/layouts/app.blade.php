@@ -10,6 +10,8 @@
 
     <!-- tailwindcss -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
 <body>
     <header>
@@ -20,9 +22,10 @@
         @yield('content')
     </main>
 
-    <footer>
+    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
         @include('layouts.footer')
     </footer>
+    @stack('scripts')
 </body>
 
 </html>
