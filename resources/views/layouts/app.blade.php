@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
 <body>
-    <header>
+    <header class="bg-green-500 p-4">
         @include('layouts.header')
     </header>
 
@@ -22,7 +22,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
+    <footer class="bg-green-500 p-4">
         @include('layouts.footer')
     </footer>
     @stack('scripts')
