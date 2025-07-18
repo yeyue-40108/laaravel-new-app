@@ -23,4 +23,19 @@ class PostController extends Controller
 
         return response()->json($events);
     }
+
+    public function index() {
+        return view('posts.index');
+    }
+
+    public function own() {
+        return view('posts.own');
+    }
+
+    public function store(Request $request){
+        $post = new Post();
+        $post->title = $request->input('title');
+        
+        return redirect()->route('posts.index');
+    }
 }

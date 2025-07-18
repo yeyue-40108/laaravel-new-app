@@ -13,8 +13,8 @@
 
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
-<body>
-    <header class="bg-green-500 p-4">
+<body class="flex flex-col h-screen">
+    <header class="bg-green-500 p-4 mb-5">
         @include('layouts.header')
     </header>
 
@@ -22,7 +22,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-green-500 p-4">
+    <footer class="bg-green-500 p-4 mt-auto">
         @include('layouts.footer')
     </footer>
     @stack('scripts')

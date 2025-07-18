@@ -5,11 +5,6 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-    safelist: [
-        'bg-green-500',
-        'bg-red-500',
-        'text-white',
-    ],
     theme: {
         extend: {},
     },
