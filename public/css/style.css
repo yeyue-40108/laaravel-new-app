@@ -1,12 +1,23 @@
 /* カレンダー */
-.fc-col-header-cell-cushion,
-.fc-daygrid-day-number,
-.fc-daygrid-day-top{
-    color: #333;
+.calendar_grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 350px;
+    margin: 0 auto;
 }
-.fc-day-sat{
-    background-color: #cce3f6;
+.week_block {
+    width: 50px;
+    height: 28px;
 }
-.fc-day-sun{
-    background-color: #f4d0df;
+.day_block {
+    width: 50px;
+    height: 50px;
+}
+.button_day {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    text-align: center;
+    background: white;
+    border: 1px solid red;
 }
