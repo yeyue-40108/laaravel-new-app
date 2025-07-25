@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 .form_frame {
-    @apply bg-white border border-gray-300 rounded;
+    @apply bg-white border border-gray-300 rounded w-full;
 }

@@ -12,7 +12,7 @@
                 <div class="flex items-center gap-2 mb-1">
                     <button type="disabled" class="bg-red-400 text-white text-sm px-1">必須</button>
                 </div>
-                <input type="text" id="name" name="name" value="{{ old('name') }}" class="form_frame w-full" autofocus>
+                <input type="text" id="name" name="name" value="{{ old('name') }}" class="form_frame" autofocus>
                 @error ('name')
                     <div class="text-red-500 text-sm">{{ $message }}</div>
                 @enderror
@@ -24,7 +24,7 @@
                 <div class="flex items-center gap-2 mb-1">
                     <button type="disabled" class="bg-red-400 text-white text-sm px-1">必須</button>
                 </div>
-                <input type="email" id="email" name="email" value="{{ old('email') }}" class="form_frame w-full">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" class="form_frame">
                 @error ('email')
                     <div class="text-red-500 text-sm">{{ $message }}</div>
                 @enderror
@@ -36,7 +36,7 @@
                 <div class="flex items-center gap-2 mb-1">
                     <button type="disabled" class="bg-green-400 text-white text-sm px-1">任意</button>
                 </div>
-                <select id="prefecture" name="prefecture" class="form_frame w-full">
+                <select id="prefecture" name="prefecture" class="form_frame">
                     <option value="">選択してください</option>
                     @foreach ($prefectures as $prefecture)
                         <option value="{{ $prefecture }}" @selected(old('prefecture') == $prefecture)>{{ $prefecture }}</option>
@@ -50,7 +50,7 @@
                 <div class="flex items-center gap-2 mb-1">
                     <button type="disabled" class="bg-red-400 text-white text-sm px-1">必須</button>
                 </div>
-                <input type="password" id="password" name="password" class="form_frame w-full">
+                <input type="password" id="password" name="password" class="form_frame">
                 @error ('password')
                     <div class="text-red-500 text-sm">{{ $message }}</div>
                 @enderror
@@ -62,7 +62,7 @@
                 <div class="flex items-center gap-2 mb-1">
                     <button type="disabled" class="bg-red-400 text-white text-sm px-1">必須</button>
                 </div>
-                <input type="password" id="password-confirm" name="password-confirmation" class="form_frame w-full">
+                <input type="password" id="password-confirm" name="password_confirmation" class="form_frame">
                 @error ('password_confirmation')
                     <div class="text-red-500 text-sm">{{ $message }}</div>
                 @enderror
@@ -73,9 +73,9 @@
             <button type="submit" class="btn bg-green-600 hover:bg-green-200 py-2 px-4 rounded">会員登録</button>
         </div>
     </form>
-    <div class="text-center mt-4 space-y-2">
-        <a href="{{ route('top') }}" class="hover:underline">戻る</a>
-        <a href="{{ route('login') }}" class="hover:underline">ログイン画面へ</a>
+    <div class="text-center mt-4 flex justify-around">
+        <a href="{{ route('top') }}" class="hover:underline">< トップページへ</a>
+        <a href="{{ route('login') }}" class="hover:underline">< ログイン画面へ</a>
     </div>
 </div>
 @endsection
