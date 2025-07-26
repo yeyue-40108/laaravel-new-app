@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="mb-4">
+    @if (session('flash_message'))
+        <p>{{ session('flash_message') }}</p>
+    @endif
     <section class="flex justify-around my-4 mx-4">
         <a href="{{ route('posts.own') }}" class="border-green-600 rounded hover:opacity-75">
             <h2 class="font-bold text-lg my-5 ml-5">今週の気分</h2>
